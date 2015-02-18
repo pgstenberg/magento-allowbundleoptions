@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Stonepath_AllowBundleOptions>
+      <version>0.1.0</version>
+    </Stonepath_AllowBundleOptions>
+  </modules>
+  <global>
+    <helpers>
+      <allowbundleoptions>
+        <class>Stonepath_AllowBundleOptions_Helper</class>
+      </allowbundleoptions>
+    </helpers>
+    
+    <models>
+    	<Stonepath_AllowBundleOptions>
+        	<class>Stonepath_AllowBundleOptions_Model</class>
+    	</Stonepath_AllowBundleOptions>
+    	<bundle>
+        	<rewrite>
+            	<observer>Stonepath_AllowBundleOptions_Model_Observer</observer>
+        	</rewrite>
+    	</bundle>
+	</models>
+
+	<blocks>
+		<Stonepath_AllowBundleOptions>
+        	<class>Stonepath_AllowBundleOptions_Block</class>
+    	</Stonepath_AllowBundleOptions>
+    	
+		<adminhtml>
+			<rewrite>
+				<catalog_product_edit_tab_options_option>Stonepath_AllowBundleOptions_Block_Catalog_Product_Edit_Tab_Options_Option</catalog_product_edit_tab_options_option>
+			</rewrite>
+		</adminhtml>
+	</blocks>
+
+  </global>
+</config> 
